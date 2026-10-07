@@ -1,0 +1,60 @@
+{
+  "summary": "Agent 页里 Claude Code 的详情新增了「sign-in」字段：可选 magpie 的密钥（默认）或 claude.ai，选 claude.ai 时把 ANTHROPIC_AUTH_TOKEN 写空以保留 claude.ai 登录；该字段只在网关接收任意密钥（回环、镜像的 WSL）时提供，未经 magpie 跑起来的 Claude Code 不画这个方块。界面文案同时补上了这两个选项的中/英/日/德等翻译。",
+  "scenes": [
+    {
+      "title": "Claude Code 的 sign-in 字段",
+      "shots": [
+        {
+          "file": "01-claude-before-wiring.png",
+          "caption": "Claude Code 未接入 magpie 时的 Agent 行",
+          "width": 2492
+        },
+        {
+          "file": "02-model-menu.png",
+          "caption": "点开的模型列表",
+          "width": 1120
+        },
+        {
+          "file": "03-claude-after-wiring.png",
+          "caption": "选好模型后 Claude Code 行里的字段",
+          "width": 2492
+        },
+        {
+          "file": "04-claude-wired-row.png",
+          "caption": "选好 magpie 的模型之后，Claude Code 这一行",
+          "width": 2496
+        },
+        {
+          "file": "05-claude-model-picked.png",
+          "caption": "选好模型后的 Claude Code 一行",
+          "width": 2492
+        },
+        {
+          "file": "06-claude-fields.png",
+          "caption": "展开后的字段，找「sign-in」",
+          "width": 2492
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [
+    "Claude Code 的 sign-in 字段 · click .row.agent[data-id=\"claude\"] .ag-link: nothing visible matches .row.agent[data-id=\"claude\"] .ag-link (0 in the page)",
+    "Claude Code 的 sign-in 字段 · click .row.agent[data-id=\"claude\"] .field[data-key=\"login\"]: nothing visible matches .row.agent[data-id=\"claude\"] .field[data-key=\"login\"] (0 in the page)",
+    "Claude Code 的 sign-in 字段 · click .row.agent[data-id=\"claude\"] .ag-link: nothing visible matches .row.agent[data-id=\"claude\"] .ag-link (0 in the page)",
+    "Claude Code 的 sign-in 字段 · shot #pop: nothing visible matches #pop (1 in the page)",
+    "Claude Code 的 sign-in 字段 · click #pop #list li: nothing visible matches #pop #list li with \"V4 Pro\" (1 in the page)",
+    "Claude Code 的 sign-in 字段 · click .row.agent[data-id=\"claude\"] .ag-link: nothing visible matches .row.agent[data-id=\"claude\"] .ag-link (0 in the page)",
+    "Claude Code 的 sign-in 字段 · click .row.agent[data-id=\"claude\"] .field[data-key=\"login\"]: nothing visible matches .row.agent[data-id=\"claude\"] .field[data-key=\"login\"] (0 in the page)",
+    "Claude Code 的 sign-in 字段 · shot #pop: nothing visible matches #pop (1 in the page)",
+    "Claude Code 的 sign-in 字段 · click #pop #list li: nothing visible matches #pop #list li with \"claude.ai\" (0 in the page)",
+    "Claude Code 的 sign-in 字段 · shot .row.agent[data-id=\"claude\"] .field[data-key=\"login\"]: nothing visible matches .row.agent[data-id=\"claude\"] .field[data-key=\"login\"] (0 in the page)"
+  ],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "沙盒里没有 claude.ai 订阅的 Claude Code 账号，看不到真正保持 claude.ai 登录后的效果；网关把上游 401（以及 403「OAuth token has been revoked」）对这类请求改写成 502、以及不转发 oauth-2025-04-20 beta，都发生在后端，界面上看不到。另外「网关只收共享密钥时（NAT 下的 WSL 发行版 + 网络共享）不提供该字段」这一分支，沙盒里没有这样的发行版，只能看到回环下提供该字段的一侧。",
+  "interactive": true,
+  "pages": 1
+}

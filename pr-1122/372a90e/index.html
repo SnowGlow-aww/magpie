@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#1122 界面预览 · 372a90e</title>
+<style>:root{color-scheme:light dark;--bg:#f6f6f7;--fg:#1d1d1f;--muted:#6e6e73;--card:#fff;--line:#e5e5ea}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f4;--muted:#9a9aa0;--card:#1c1c1f;--line:#2c2c30}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}h1{font-size:20px;margin:0 0 4px}.m{color:var(--muted);font-size:13px;margin:0 0 20px}
+video,img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card)}figure{margin:0 0 28px}figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+a{color:inherit}</style>
+<main><h1>#1122 界面预览</h1><p class="m">commit 372a90e · <a href="https://github.com/yetone/magpie/pull/1122">回到 PR</a> · 供应商里新增 Google Vertex AI 预设：它的编辑器用「项目 ID / 位置 / 凭据文件 / 服务账号」取代 API 密钥，端点显示由项目与位置拼出的地址，未填项目时保存会被拒绝；列表行的密钥栏改为显示签名用的凭据来源（服务账号、凭据文件或 Google ADC）或「需要项目」。用量 → 请求的协议标签现在也认得 Gemini 的 streamGenerateContent。</p>
+<figure><video src="preview.mp4" controls autoplay muted playsinline poster="poster.png"></video><figcaption>红线是鼠标走过的轨迹，红色圆环是一次点击；底部文字是这一步在做什么。空格暂停，← → 逐段查看。</figcaption></figure>
+<figure><img src="01-vertex-preset-tile.png" alt="预设列表里的 Google Vertex AI"><figcaption>添加 Google Vertex AI 供应商 · 预设列表里的 Google Vertex AI</figcaption></figure>
+<figure><img src="02-vertex-editor-fields.png" alt="编辑器：项目 ID、位置、凭据文件、服务账号，这里没有 API 密钥"><figcaption>添加 Google Vertex AI 供应商 · 编辑器：项目 ID、位置、凭据文件、服务账号，这里没有 API 密钥</figcaption></figure>
+<figure><img src="03-vertex-needs-project.png" alt="保存时对缺少项目 ID 的提示"><figcaption>添加 Google Vertex AI 供应商 · 保存时对缺少项目 ID 的提示</figcaption></figure>
+<figure><img src="04-vertex-endpoints.png" alt="端点一栏按项目与位置拼出的地址"><figcaption>添加 Google Vertex AI 供应商 · 端点一栏按项目与位置拼出的地址</figcaption></figure>
+<figure><img src="05-vertex-row.png" alt="列表末尾新增的 Google Vertex AI 行，看它密钥一栏显示的内容"><figcaption>添加 Google Vertex AI 供应商 · 列表末尾新增的 Google Vertex AI 行，看它密钥一栏显示的内容</figcaption></figure>
+<figure><img src="06-usage-requests-protocol.png" alt="用量 → 请求：每行请求显示的协议标签"><figcaption>用量 → 请求的协议标签 · 用量 → 请求：每行请求显示的协议标签</figcaption></figure>
+</main></html>

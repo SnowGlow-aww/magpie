@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#1218 界面预览 · 6b3ffe4</title>
+<style>:root{color-scheme:light dark;--bg:#f6f6f7;--fg:#1d1d1f;--muted:#6e6e73;--card:#fff;--line:#e5e5ea}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f4;--muted:#9a9aa0;--card:#1c1c1f;--line:#2c2c30}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}h1{font-size:20px;margin:0 0 4px}.m{color:var(--muted);font-size:13px;margin:0 0 20px}
+video,img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card)}figure{margin:0 0 28px}figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+a{color:inherit}</style>
+<main><h1>#1218 界面预览</h1><p class="m">commit 6b3ffe4 · <a href="https://github.com/yetone/magpie/pull/1218">回到 PR</a> · Agent 页里 Claude Code 的详情新增了「sign-in」字段：可选 magpie 的密钥（默认）或 claude.ai，选 claude.ai 时把 ANTHROPIC_AUTH_TOKEN 写空以保留 claude.ai 登录；该字段只在网关接收任意密钥（回环、镜像的 WSL）时提供，未经 magpie 跑起来的 Claude Code 不画这个方块。界面文案同时补上了这两个选项的中/英/日/德等翻译。</p>
+<figure><video src="preview.mp4" controls autoplay muted playsinline poster="poster.png"></video><figcaption>红线是鼠标走过的轨迹，红色圆环是一次点击；底部文字是这一步在做什么。空格暂停，← → 逐段查看。</figcaption></figure>
+<figure><img src="01-claude-before-wiring.png" alt="Claude Code 未接入 magpie 时的 Agent 行"><figcaption>Claude Code 的 sign-in 字段 · Claude Code 未接入 magpie 时的 Agent 行</figcaption></figure>
+<figure><img src="02-model-menu.png" alt="点开的模型列表"><figcaption>Claude Code 的 sign-in 字段 · 点开的模型列表</figcaption></figure>
+<figure><img src="03-claude-after-wiring.png" alt="选好模型后 Claude Code 行里的字段"><figcaption>Claude Code 的 sign-in 字段 · 选好模型后 Claude Code 行里的字段</figcaption></figure>
+<figure><img src="04-claude-wired-row.png" alt="选好 magpie 的模型之后，Claude Code 这一行"><figcaption>Claude Code 的 sign-in 字段 · 选好 magpie 的模型之后，Claude Code 这一行</figcaption></figure>
+<figure><img src="05-claude-model-picked.png" alt="选好模型后的 Claude Code 一行"><figcaption>Claude Code 的 sign-in 字段 · 选好模型后的 Claude Code 一行</figcaption></figure>
+<figure><img src="06-claude-fields.png" alt="展开后的字段，找「sign-in」"><figcaption>Claude Code 的 sign-in 字段 · 展开后的字段，找「sign-in」</figcaption></figure>
+</main></html>
